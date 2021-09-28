@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''A module for working with squares.
 '''
+
 class Square:
     """Represents a square.
     Private instance attribute: size:
@@ -36,9 +37,9 @@ class Square:
     def my_print(self):
         """Prints to stdout the square with the character #."""
         if self.__size == 0:
-            print()
+            print('')
         else:
-            for i in range(0, self.__size):
-                for j in range(0, self.__size):
+            for i in range(self.__size):
+                for j in range(self.__size):
                     print("#", end="")
-                print()
+                print('')
