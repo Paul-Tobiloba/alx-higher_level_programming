@@ -6,11 +6,6 @@ Creates a class.
 
 class BaseGeometry:
     """Class with public instance method."""
-    
-    def __init__(self):
-        """Empty init"""
-        
-        pass
 
     def area(self):
         """Raises an Exception with the message
