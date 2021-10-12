@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module 13-student.
+"""Module 12-student.
 Creates a Student class.
 """
 
@@ -11,7 +11,6 @@ class Student:
         - last_name
         - age
     Public method to_json().
-    Public method reload_from_json().
     """
 
     def __init__(self, first_name, last_name, age):
@@ -30,18 +29,9 @@ class Student:
         """
 
         my_dict = dict()
-        if attrs and all(isinstance(x, str) for x in attrs):
+        if type(attrs) is list and all(type(x) is str for x in attrs):
             for x in attrs:
                 if x in self.__dict__:
                     my_dict.update({x: self.__dict__[x]})
             return my_dict
-        return self.__dict__
-
-    def reload_from_json(self, json):
-        """Replaces all attributes of the Student instance.
-        Args:
-            - json: dictionnary of attributes
-        """
-
-        for x in json:
-            self.__dict__.update({x: json[x]})
+        return self.__dict__.copy()
