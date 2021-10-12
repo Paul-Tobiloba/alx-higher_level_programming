@@ -1,4 +1,4 @@
-!/usr/bin/python3
+#!/usr/bin/python3
 """Module 6-load_from_json_file.
 Creates an Object from a “JSON file”.
 """
